@@ -1,0 +1,22 @@
+{
+  "name": "tech.adriano.bamazon",
+  "version": "1.0.0",
+  "description": "Application to manager product sales HW12 bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adliano/Bamazon.git"
+  },
+  "keywords": [
+    "bamazon"
+  ],
+  "author": "Adriano Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adliano/Bamazon/issues"
+  },
+  "homepage": "https://github.com/adliano/Bamazon#readme"
+}
