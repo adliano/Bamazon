@@ -1,5 +1,6 @@
+-- http://www.mysqltutorial.org/mysql-delete-duplicate-rows/
 
-DROP DATABASE bamazon_db;
+-- DROP DATABASE bamazon_db;
 
 CREATE DATABASE IF NOT EXISTS bamazon_db;
 

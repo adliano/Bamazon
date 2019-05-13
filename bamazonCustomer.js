@@ -1,6 +1,8 @@
 // http://www.mysqltutorial.org/
 // https://www.npmjs.com/package/inquirer#examples
 
+let ListProducts = require('./ListProducts');
+
 let inquirer = require('inquirer');
 
 inquirer.prompt([
@@ -12,4 +14,5 @@ inquirer.prompt([
     }
 ]).then((answer) =>{
     console.log(answer);
+    new ListProducts();
 });
