@@ -1,13 +1,8 @@
 // first display all of the items available for sale. 
 // Include the skus, names, and prices of products for sale.
-/**
- * product_name,
-    department_name,
-    price,
-    stock_quantity
- */
 
 const mysql = require('mysql');
+require('console.table');
 
 const TABLE_NAME = 'products_tb';
 
@@ -32,11 +27,13 @@ class ListProducts {
                     // Check for error
                     if (err) throw err;
                     // Display results
-                    console.log(res);
+                    //console.log(res);
+                    console.table(res);
                     // End connection to mysql server
                     connector.end();
                 });
         });
+        
         
     }
 }
