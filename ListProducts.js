@@ -16,7 +16,7 @@ const connector = mysql.createConnection({
 
 class ListProducts {
 
-    constructor() {
+    constructor(mycallback) {
         connector.connect((err) => {
             if (err) throw err;
             connector.query(
@@ -31,6 +31,7 @@ class ListProducts {
                     console.table(res);
                     // End connection to mysql server
                     connector.end();
+                    mycallback();
                 });
         });
         
