@@ -26,10 +26,9 @@ function sales() {
             name: 'stock_quantity'
         }
     ]).then((answer) => {
-        console.log(answer);
         // Once the customer has placed the order, your application should check if 
         // your store has enough of the product to meet the customer's request.
-        new SaleProducts();
+        new SaleProducts(answer).getStock();
     });
 }
 

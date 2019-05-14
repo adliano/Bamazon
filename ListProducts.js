@@ -6,21 +6,31 @@
  */
 const mysql = require('mysql');
 /**
+ * @module MysqlConfig
+ */
+const mysqlconfig = require('./MysqlConfig');
+/**
+ * @module
+ */
+const TABLE_NAME = mysqlconfig.TABLE_NAME;
+/**
  * @module console.table
  */
 require('console.table');
 
 // Constant used for table name
-const TABLE_NAME = 'products_tb';
+//const TABLE_NAME = 'products_tb';
 
 // Mysql server connection setup
-const connector = mysql.createConnection({
-    host: '127.0.0.1',
-    port: 3306,
-    user: 'nodeUser',
-    password: '',
-    database: 'bamazon_db'
-});
+const connector = mysql.createConnection(mysqlconfig.mysqlconfig);
+
+// const connector = mysql.createConnection({
+//     host: '127.0.0.1',
+//     port: 3306,
+//     user: 'nodeUser',
+//     password: '',
+//     database: 'bamazon_db'
+// });
 /**
  * Class to list products from mysql server
  */
