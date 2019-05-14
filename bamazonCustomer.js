@@ -19,7 +19,6 @@ function sales() {
         message: 'What do you like to buy?',
         name: 'todo'
     }]).then((answer) => {
-        // TODO: 
         console.log(answer);
 
     });
