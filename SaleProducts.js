@@ -32,6 +32,28 @@ class SaleProducts{
                 });
         });
     }
+
+    getProductName(){
+        // Connect to server
+        connector.connect((err) => {
+            // Check for error on connection
+            if (err) throw err;
+            // query through database.table
+            connector.query(
+                // Query to display all available products
+                `SELECT product_name FROM ${TABLE_NAME} WHERE sku=${this.sku}`,
+                // Callback used to handle the return from query
+                (err, res) => {
+                    // Check for error on querying the database.table
+                    if (err) throw err;
+                    // close connection to mysql server
+                    connector.end();
+
+                    return res;
+                });
+        });
+
+    }
 }
 
 module.exports = SaleProducts;
