@@ -12,14 +12,14 @@ const mysqlconfig = require('./MysqlConfig');
 /**
  * @module
  */
-const TABLE_NAME = mysqlconfig.TABLE_NAME;
+const PRODUCT_TABLE = mysqlconfig.PRODUCT_TABLE;
 /**
  * @module console.table
  */
 require('console.table');
 
 // Constant used for table name
-//const TABLE_NAME = 'products_tb';
+//const PRODUCT_TABLE = 'products_tb';
 
 // Mysql server connection setup
 const connector = mysql.createConnection(mysqlconfig.mysqlconfig);
@@ -47,7 +47,7 @@ class ListProducts {
             // query through database.table
             connector.query(
                 // Query to display all available products
-                `SELECT * FROM ${TABLE_NAME}`,
+                `SELECT * FROM ${PRODUCT_TABLE}`,
                 // Callback used to handle the return from query
                 (err, res) => {
                     // Check for error on querying the database.table

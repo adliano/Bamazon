@@ -8,4 +8,4 @@ exports.mysqlconfig = {
     database: 'bamazon_db'
 };
 
-exports.TABLE_NAME = 'products_tb';
+exports.PRODUCT_TABLE = 'products_tb';
