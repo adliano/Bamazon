@@ -1,3 +1,4 @@
+// Require mysql npm module
 const mysql = require("mysql");
 let inquirer = require("inquirer");
 const mysqlconfig = require("./MysqlConfig");
