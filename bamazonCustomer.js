@@ -25,24 +25,11 @@ function sales() {
       {
         type: "input",
         message: "How many units of the product would you like to buy?",
-        name: "stock_quantity"
+        name: "quantity_requested"
       }
     ])
     .then(answer => {
-      // Once the customer has placed the order, your application should check if
-      // your store has enough of the product to meet the customer's request.
-      let sales = new SaleProducts(answer);
-
-      sales
-        .getProductInfo()
-        .then(x => {
-          console.log("-".repeat(40));
-          console.log(x);
-          console.log("-".repeat(40));
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      new SaleProducts(answer);
     });
 }
 
