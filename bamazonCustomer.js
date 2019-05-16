@@ -10,8 +10,7 @@ let ListProducts = require("./ListProducts");
 let SaleProducts = require("./SaleProducts");
 let inquirer = require("inquirer");
 
-// Function (Callback) used to display questions about sale products
-function sales() {
+new ListProducts().then(() => {
   // The first should ask them the SKU of the product they would like to buy
   inquirer
     .prompt([
@@ -31,6 +30,4 @@ function sales() {
     .then(answer => {
       new SaleProducts(answer);
     });
-}
-
-new ListProducts(sales);
+});
