@@ -46,3 +46,5 @@ INSERT INTO
     stock_quantity
   )
 VALUES('gt karakoram', 'bicycle', 1200, 2);
+
+UPDATE  products_tb set stock_quantity=0 where sku=1;
