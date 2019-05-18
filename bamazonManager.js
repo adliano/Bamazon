@@ -11,7 +11,8 @@
 // * If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
 
 let inquirer = require("inquirer");
-let ListProducts = require("./ListProducts");
+let ListProducts = require("./lib/ListProducts");
+let ManagerProducts = require("./lib/ManagerProducts");
 
 inquirer
   .prompt([
@@ -38,7 +39,7 @@ inquirer
         lp.listInventory(5);
         break;
       case "Add to Inventory":
-        console.log("add invß");
+        new ManagerProducts().addProduct();
         break;
       case "Add New Product":
         console.log("add product");

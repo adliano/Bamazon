@@ -6,8 +6,8 @@
  * and prices of products for sale.
  */
 
-let ListProducts = require("./ListProducts");
-let SaleProducts = require("./SaleProducts");
+let ListProducts = require("./lib/ListProducts");
+let SaleProducts = require("./lib/SaleProducts");
 let inquirer = require("inquirer");
 
 let products = new ListProducts();
