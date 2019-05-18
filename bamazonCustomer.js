@@ -10,7 +10,9 @@ let ListProducts = require("./ListProducts");
 let SaleProducts = require("./SaleProducts");
 let inquirer = require("inquirer");
 
-new ListProducts().then(() => {
+let products = new ListProducts();
+
+products.listInventory().then(() => {
   // The first should ask them the SKU of the product they would like to buy
   inquirer
     .prompt([

@@ -29,12 +29,13 @@ inquirer
     }
   ])
   .then(opt => {
+    let lp = new ListProducts();
     switch (opt.option) {
       case "View Products for Sale":
-        new ListProducts();
+        lp.listInventory();
         break;
       case "View Low Inventory":
-        console.log("view low inventory");
+        lp.listInventory(5);
         break;
       case "Add to Inventory":
         console.log("add invß");
