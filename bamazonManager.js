@@ -39,10 +39,10 @@ inquirer
         lp.listInventory(5);
         break;
       case "Add to Inventory":
-        new ManagerProducts().addProduct();
+        new ManagerProducts().addInventory();
         break;
       case "Add New Product":
-        console.log("add product");
+        new ManagerProducts().createProduct();
         break;
       default:
         console.log("OPS!");
