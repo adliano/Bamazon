@@ -13,6 +13,7 @@
 let inquirer = require("inquirer");
 let ListProducts = require("./lib/ListProducts");
 let ManagerProducts = require("./lib/ManagerProducts");
+const print = require("print-message");
 
 inquirer
   .prompt([
@@ -36,7 +37,13 @@ inquirer
         lp.listInventory();
         break;
       case "View Low Inventory":
-        lp.listInventory(5);
+        lp.listInventory(5)
+          .then(result => {
+            if (result.length < 1) {
+              print(["No Product with Low inventory"]);
+            }
+          })
+          .catch(err => console.error(err));
         break;
       case "Add to Inventory":
         new ManagerProducts().addInventory();
