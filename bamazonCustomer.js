@@ -6,11 +6,13 @@
  * and prices of products for sale.
  */
 
-let ListProducts = require("./ListProducts");
-let SaleProducts = require("./SaleProducts");
+let ListProducts = require("./lib/ListProducts");
+let SaleProducts = require("./lib/SaleProducts");
 let inquirer = require("inquirer");
 
-new ListProducts().then(() => {
+let products = new ListProducts();
+
+products.listInventory().then(() => {
   // The first should ask them the SKU of the product they would like to buy
   inquirer
     .prompt([
