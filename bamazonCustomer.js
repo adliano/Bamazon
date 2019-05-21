@@ -1,5 +1,3 @@
-// http://www.mysqltutorial.org/
-// https://www.npmjs.com/package/inquirer#examples
 /**
  * Running this application will first display all of
  * the items available for sale. Include the skus, names,
